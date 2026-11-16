@@ -83,7 +83,12 @@
     .js .rule, .js footer { animation-delay: .6s; }
   }
   @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-</style>
+    .tt-menu { display: grid; gap: 8px; margin-top: 8px; padding-inline-start: 28px; }
+    .tt-menu[hidden] { display: none; }
+    .links .tt-menu a { min-height: 50px; padding-block: 8px; padding-inline: 18px; font-size: 16px; }
+    .links .tt-toggle[aria-expanded="true"] .go, .links .tt-toggle[aria-expanded="true"]:hover .go { transform: rotate(90deg); color: var(--gold-lt); }
+    .links .tt-toggle[aria-expanded="true"] { border-color: var(--gold); }
+  </style>
 </head>
 <body>
 <div class="bg"></div>
@@ -99,18 +104,27 @@
   </header>
 
   <ul class="links">
-    <li style="--i:0"><a href="https://www.instagram.com/love_jewellery31/" target="_blank" rel="noopener">
+    <li style="--i:0"><a class="main" href="https://maps.google.com/?cid=553869080795275204" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.75l-6.17 3.24l1.18-6.87l-5-4.86l6.9-1l3.09-6.26l3.09 6.26l6.9 1l-5 4.86l1.18 6.87z"/></svg></span>
+      <span class="tx"><span data-i="rev">Laissez-nous un avis</span><small data-i="revSub">Avis Google</small></span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a></li>
+    <li style="--i:1"><a href="https://www.instagram.com/love_jewellery31/" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M16.5 7.5v.01"/></svg></span>
       <span class="tx"><span data-i="ig">Nos bijoux sur Instagram</span><small dir="ltr">@love_jewellery31</small></span>
       <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a></li>
-    <li style="--i:1"><a href="https://www.tiktok.com/@love.jewellery31" target="_blank" rel="noopener">
+    <li style="--i:2" class="tt">
+      <a class="tt-toggle" href="https://www.tiktok.com/@love.jewellery31" target="_blank" rel="noopener" aria-expanded="false" aria-controls="tt-menu">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.917v4.034a9.948 9.948 0 0 1-5-1.951v4.5a6.5 6.5 0 1 1-8-6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"/></svg></span>
-      <span class="tx"><span>TikTok</span><small dir="ltr">@love.jewellery31</small></span>
-      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a></li>
-    <li style="--i:2"><a href="https://www.tiktok.com/@lovejewellery31" target="_blank" rel="noopener">
-      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7.917v4.034a9.948 9.948 0 0 1-5-1.951v4.5a6.5 6.5 0 1 1-8-6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z"/></svg></span>
-      <span class="tx"><span>TikTok</span><small dir="ltr">@lovejewellery31</small></span>
-      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a></li>
+      <span class="tx"><span>TikTok</span><small data-i="ttSub">2 comptes · choisissez</small></span>
+      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a>
+      <div class="tt-menu" id="tt-menu" hidden>
+        <a href="https://www.tiktok.com/@love.jewellery31" target="_blank" rel="noopener">
+          <span class="tx"><span dir="ltr">@love.jewellery31</span></span>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a>
+        <a href="https://www.tiktok.com/@lovejewellery31" target="_blank" rel="noopener">
+          <span class="tx"><span dir="ltr">@lovejewellery31</span></span>
+          <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a>
+      </div></li>
     <li style="--i:3"><a href="https://www.snapchat.com/add/jeewelleryl" target="_blank" rel="noopener">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.882 7.842a4.882 4.882 0 0 0-9.764 0c0 4.273-.213 6.409-4.118 8.118c2 .882 2 .882 3 3c3 0 4 2 6 2s3-2 6-2c1-2.118 1-2.118 3-3c-3.906-1.709-4.118-3.845-4.118-8.118z"/></svg></span>
       <span class="tx"><span>Snapchat</span><small dir="ltr">jeewelleryl</small></span>
@@ -127,10 +141,6 @@
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
       <span class="tx"><span data-i="map">Itinéraire</span><small data-i="addr">Rue Mohamed V · Oran</small></span>
       <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a></li>
-    <li style="--i:7"><a class="main" href="https://maps.google.com/?cid=553869080795275204" target="_blank" rel="noopener">
-      <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.75l-6.17 3.24l1.18-6.87l-5-4.86l6.9-1l3.09-6.26l3.09 6.26l6.9 1l-5 4.86l1.18 6.87z"/></svg></span>
-      <span class="tx"><span data-i="rev">Laissez-nous un avis</span><small data-i="revSub">Avis Google</small></span>
-      <svg class="go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></a></li>
   </ul>
 
   <svg class="rule" viewBox="0 0 424 10" preserveAspectRatio="none" aria-hidden="true"><path fill="#8A6A2A" d="M0 4.5h190v1H0zM234 4.5h190v1H234z"/><path fill="#C9A24A" d="M212 1l5 4-5 4-5-4z"/></svg>
@@ -143,10 +153,10 @@
 <script>
 const T = {
   fr: { title: "Love Jewellery Oran", sub: "Bijouterie · Oran", ig: "Nos bijoux sur Instagram", call: "Appelez-nous", shop: "La bijouterie",
-        map: "Itinéraire", addr: "Rue Mohamed V · Oran", rev: "Laissez-nous un avis", revSub: "Avis Google",
+        map: "Itinéraire", addr: "Rue Mohamed V · Oran", rev: "Laissez-nous un avis", revSub: "Avis Google", ttSub: "2 comptes · choisissez",
         langBtn: "عربي", langLabel: "التبديل إلى العربية", doc: "Love Jewellery Oran · Tous nos liens" },
   ar: { title: "Love Jewellery Oran", sub: "مجوهرات · وهران", ig: "مجوهراتنا على إنستغرام", call: "اتصلوا بنا", shop: "المحل",
-        map: "الاتجاهات", addr: "شارع محمد الخامس · وهران", rev: "اتركوا لنا تقييمًا", revSub: "تقييمات Google",
+        map: "الاتجاهات", addr: "شارع محمد الخامس · وهران", rev: "اتركوا لنا تقييمًا", revSub: "تقييمات Google", ttSub: "حسابان · اختاروا",
         langBtn: "FR", langLabel: "Passer en français", doc: "Love Jewellery · كل روابطنا" }
 };
 let lang = "fr";
@@ -165,6 +175,8 @@ document.getElementById("lang").addEventListener("click", () => {
   render();
 });
 render();
+const tg = document.querySelector(".tt-toggle"), tm = document.getElementById("tt-menu");
+tg.addEventListener("click", e => { e.preventDefault(); const open = tg.getAttribute("aria-expanded") !== "true"; tg.setAttribute("aria-expanded", open); tm.hidden = !open; });
 </script>
 </body>
 </html>
